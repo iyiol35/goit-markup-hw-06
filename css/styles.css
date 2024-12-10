@@ -53,7 +53,7 @@ h1 h2 h3 h4 h5 h6 p {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 0 autopx;    
+    margin: 0 auto;    
 }
 
 .tepe {
@@ -75,7 +75,7 @@ h1 h2 h3 h4 h5 h6 p {
     margin-right: 76px;
 }
 
-.tepe .tepe-link span {
+.tepe .tepe-link .tepelink-span {
     color: #2e2f42;
 }
 
@@ -172,7 +172,7 @@ h1 h2 h3 h4 h5 h6 p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 10;
+    gap: 10px;
 }
 
 .parta .parta-baslik {
@@ -215,7 +215,7 @@ h1 h2 h3 h4 h5 h6 p {
 .parta .link-b:focus,
 .parta .link-b:hover {
     background-color: #404BBF;
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .partb {
@@ -353,7 +353,7 @@ border: 1px solid #8E8F99;
 }
 .partc .listed .alt-liste {
     background-color: #ffffff;
-    width: calc((100%-72px)/4);
+    width: calc((100% - 72px) / 4);
     border-radius: 0px 0px 4px 4px;
 }
 
@@ -595,7 +595,7 @@ border: 1px solid #8E8F99;
 }
 #plane with the paper{
     width: 24px;
-    height: 24;  
+    height: 24px;  
 }
 .plane{
 margin-left: 16px;
@@ -785,3 +785,305 @@ margin-left: 16px;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     border: none;
 }
+/*mobile*/
+@media (min-width: 320px)and(max-width: 767px){
+    .item{      
+        position: static;
+        top: 0;
+        left: 0;
+        background-color: #f4f4fd;
+        width: 100%;
+         box-sizing: border-box;
+    }
+    .item .container {
+        display: flex;
+        flex-direction: row;
+        padding: 24px 16px;
+    }
+    .item .container .menu-button {
+        display: block;
+        width: 24px;
+        height: 24px;
+        padding: 5px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }    
+    .item .container .menu-button:hover+.menu-button .menu-ikon {
+         fill: #4d5ae5;
+    }
+    .tepe .tepe-link{
+        display: none;
+        position: absolute;
+        top: 16px;
+        right: 189px;
+        bottom: 16px;
+        left: 16px;
+    }
+    .tepe-link .liste_a{
+        display: none;
+    }
+    .adres{
+        display: none;
+    }
+    .menusvg{
+        display: flex;
+        position: absolute;
+        top: 16px;
+        left: 280px;
+        gap: 149px;
+    }
+    .parta{
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+    }
+    .parta-baslik{
+        display: flex;
+        top: 52px;
+        left: 52px;
+        gap: 72px;
+        width: 216px;
+        height: 160px;
+    }
+    .parta .link-b{
+        display: flex;
+        position: absolute;
+        top: 304px;
+        width: 100%;
+        height: 24px;
+        justify-items: center;
+    }
+    .partb{
+        position: relative;
+        width: 100%;
+    }
+    .partb .container{
+        padding: 0 16px;
+    }
+    .partb .liste_d{
+        flex-direction: column;
+        justify-content: center;
+        gap: 72px;
+    }
+    .partb .liste_c .li-a{
+        min-width: 100%;
+    }
+        .partb .liste_c .li-a .liste_c-icon{
+        display: none;
+    }
+    .partb-baslik-a{
+        text-align: center;
+        font-size: 36px;
+    }
+    .partc .container{
+        padding: 0 28px;
+    }
+    .partc .liste_d{
+        flex-direction: column;
+        justify-content: center;
+        gap: 72px;
+    }
+    ..partc .liste_d .alt-liste{
+        min-width: 100%;
+    }
+    .partd .container{
+        padding: 0 16px;  
+    }
+    .partd .liste_e{
+        flex-direction: column;
+        justify-content: center;
+        gap: 72px;
+    }
+    .partd .liste_e .list{
+        min-width: 100%;
+        }
+    .partd .liste_e .list .img-box{ 
+        width: 100%;
+    }
+    .final .container{
+        flex-direction: column;
+        align-items: center;
+        gap: 72px;
+        padding: 0 16px;
+    }
+    .final .container .footer-flex 
+    .final .container .footer-socials{
+        margin: 0;
+        text-align: center;
+    }
+    .final .container .final-link{
+        margin: 0 0 17.5px 0;
+    }
+    .final .container .div-form{
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        min-width: 100%;
+    }
+    .final .container .div-form .form-text{
+        margin: 0;
+    }
+    .final .container .div-form .final-form{
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+    .subscribe{
+        width: 100%;
+    }
+    .final-button{
+        width: 117px;
+    }
+    .modal-navbar {
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: #ffffff;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+    }
+    
+    .modal-navbar .modal-menu {
+        margin: 72px 16px 24px 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 168px;
+    }
+    
+    .modal-navbar .modal-menu .nav-list {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .modal-navbar .modal-menu .nav-list .nav-item {
+        padding: 0;
+    }
+    
+    .nav-list .nav-item:nth-of-type(1) .nav-link::after {
+        height: 0;
+    }
+    
+    .modal-navbar .modal-menu .nav-list .nav-item .nav-link {
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 40px;
+        letter-spacing: 0.02em;
+    }
+    .modal-navbar .modal-menu .address-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+    }    
+    .modal-navbar .modal-menu .address-menu .address-list {
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: 24px;
+    }    
+    .modal-navbar .modal-menu .address-menu .address-list .address-item {
+        padding: 0;
+    }    
+    .modal-navbar .modal-menu .address-menu .address-list .address-item .address-link {
+        font-size: 20px;
+    }    
+    .modal-navbar .modal-menu .address-menu .address-list .address-item:nth-child(2) .address-link {
+        color: #4d5ae5;
+    }    
+    .modal-navbar .modal-menu .address-menu .social-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }    
+    .modal-navbar .modal-menu .address-menu .social-list .social-item {
+        width: 60px;
+        height: 60px;
+    }    
+    .modal-navbar .modal-menu .address-menu .social-list .social-item .social-link {
+        width: 100%;
+        height: 100%;
+        background-color: #4d5ae5;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+}
+/*tablet*/
+@media (min-width: 767px)and(max-width: 1158px){
+    .container {
+        width: 100%;
+    }
+    .tepe .tepe-link{
+        margin-right: 120px;
+    }
+    .adres{
+        margin: 0;
+    }
+    .adres .liste_b{
+        flex-direction: column;
+        gap: 0;
+    }
+    .adres .liste_b .aadres-li{
+        padding-top: 8px;
+        padding-bottom: 0px;
+    }
+    .adres .liste_b .aadres-li .email .phone-number{
+        font-size: 12px;
+    }
+    .partb .liste_c {
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+        column-gap: 24px;
+        row-gap: 72px;
+    }    
+    .partb .liste_c .li-a {
+        min-width: 356px;
+    }    
+    .partb .liste_c .li-a .partb-baslik-a {
+        font-size: 36px;
+    }
+    .partb .container .liste_c .liste_c-icon{
+        display: none;
+    }
+    .partc .container{
+        padding-left: 108px;
+        padding-right: 108px;
+    }
+    .partc .liste_d{
+        column-gap: 24px;
+        row-gap: 64px;
+        justify-content: center;
+    }
+    .partc .liste_d .alt-liste{
+        min-width: 264px;
+    }
+    .partd .liste_e{
+        margin: auto;
+        justify-content: center;
+    }
+    .partd .liste_e .list{
+        min-width: 356px;
+    }
+    .final .container{
+        margin: 0;
+        flex-wrap: wrap;
+        padding-left: 108px;
+        column-gap: 24px;
+        row-gap: 72px;
+    }
+    .final .container .footer-flex{
+        margin: 0;
+    }
+    .final .container.div-form{
+        margin: 0;
+    }  
+}
+    
+    
